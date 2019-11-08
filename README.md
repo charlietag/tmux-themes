@@ -15,7 +15,7 @@ Add plugin to the list of TPM plugins in `.tmux.conf`:
 
 Hit `prefix + I` to fetch the plugin and source it.
 
-Enjoy your tmux new look !
+Enjoy your tmux's new look !
 
 ### Manual Installation
 
@@ -32,7 +32,7 @@ Reload TMUX environment:
     # type this in terminal
     $ tmux source-file ~/.tmux.conf
 
-Enjoy your tmux new look !
+Enjoy your tmux's new look !
 
 
 ## Examples
