@@ -17,7 +17,7 @@ Hit `prefix + I` to fetch the plugin and source it.
 
 Enjoy your tmux's new look !
 
-### Manual Installation
+## Manual Installation
 
 Clone the repo:
 
@@ -35,7 +35,7 @@ Reload TMUX environment:
 Enjoy your tmux's new look !
 
 
-## Examples
+# Examples
 
 tmux-theme:<br/>
 ![tmux-theme](/screenshots/tmux-theme.png)
