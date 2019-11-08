@@ -1,6 +1,6 @@
 # Tmux theme
 
-This is an plugin that applying tmux theme maintained by me.
+This is an plugin that applying the tmux theme maintained by me.
 
 This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
