@@ -1,6 +1,6 @@
-# Tmux theme
+# Tmux themes
 
-This is an plugin that applying the tmux theme maintained by me.
+This is an plugin that applying the tmux themes maintained by me.
 
 This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
@@ -39,6 +39,8 @@ Enjoy your tmux new look !
 
 tmux-theme:<br/>
 ![tmux-theme](/screenshots/tmux-theme.png)
+
+There might be more themes in the future.
 
 
 # License
