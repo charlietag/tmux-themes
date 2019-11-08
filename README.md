@@ -1,4 +1,4 @@
-# Tmux Plugin - Apply tmux theme
+# Tmux theme
 
 This is an plugin that applying tmux theme maintained by me.
 
