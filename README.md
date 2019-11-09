@@ -42,6 +42,10 @@ tmux-theme:<br/>
 
 There might be more themes in the future.
 
+# Other goodies
+
+- [tmux-split-statusbar](https://github.com/charlietag/tmux-split-statusbar) - a plugin for spliting status bar into 2 parts (lines) : windoow , status-left/status-right
+- [tmux-cpu-model](https://github.com/charlietag/tmux-cpu-model) - a plugin for fetching cpu info of the server, and counting cpu cores.
 
 # License
 
