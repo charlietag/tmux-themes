@@ -42,6 +42,10 @@ tmux-theme:<br/>
 
 There might be more themes in the future.
 
+# Reference configuration
+
+- [.tmux.conf](https://github.com/charlietag/os_preparation/blob/master/helpers_views/helper_env_user_base/user_home/.tmux.conf) - Tmux configuration sample by CharlieTag
+
 # Other goodies
 
 - [tmux-split-statusbar](https://github.com/charlietag/tmux-split-statusbar) - a plugin for spliting status bar into 2 parts (lines) : windoow , status-left/status-right
