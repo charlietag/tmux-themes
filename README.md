@@ -42,7 +42,7 @@ tmux-theme:<br/>
 
 There might be more themes in the future.
 
-# Reference configuration
+# Also read
 
 - [.tmux.conf](https://github.com/charlietag/os_preparation/blob/master/helpers_views/helper_env_user_base/user_home/.tmux.conf) - Tmux configuration sample by CharlieTag
 
