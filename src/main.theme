@@ -76,7 +76,9 @@ set -g status-style bg=colour233,fg=colour240
 set -g status-left-length 30
 set -g status-left-style bg=colour234,fg=colour243 # default style for left status bar , no use actually, because style is overrided while setting status-format below
 set -g status-left "#[fg=colour232,bg=red,bold]#{?client_prefix, <PREFIX> ,}#[fg=colour232,bg=colour203,bold]#{?pane_in_mode, <COPY> ,}"
-set -ag status-left "#[fg=colour232,bg=colour100,bold] #S #[fg=colour100,bg=colour240,nobold]#[fg=colour233,bg=colour240] #{@whoami} #[fg=colour240,bg=colour235]#[fg=colour240,bg=colour235] #I:#P #[fg=colour235,bg=colour233,nobold]"
+
+# tmux list-clients -F '#{line}' , works well with <prefix> + D (list and close connected clients)
+set -ag status-left "#[fg=colour232,bg=colour58,bold] Clients ▶▶▶ #(tmux list-clients -F '#{line}' | wc -l) #[fg=colour232,bg=colour100,bold] #S #[fg=colour100,bg=colour240,nobold]#[fg=colour233,bg=colour240] #{@whoami} #[fg=colour240,bg=colour235]#[fg=colour240,bg=colour235] #I:#P #[fg=colour235,bg=colour233,nobold]"
 #set -ag status-left "#[fg=colour232,bg=colour100,bold] #S #[fg=colour100,bg=colour240,nobold]#[fg=colour233,bg=colour240] #(whoami) #[fg=colour240,bg=colour235]#[fg=colour240,bg=colour235] #I:#P #[fg=colour235,bg=colour233,nobold]"
 
 
