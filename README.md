@@ -42,6 +42,12 @@ tmux-theme:<br/>
 
 There might be more themes in the future.
 
+# Useful command
+
+* List clients and kill clients (works with status-left bar "Clients ▶▶▶ x")
+
+  `<prefix> + D`
+
 # Also read
 
 - [.tmux.conf](https://github.com/charlietag/os_preparation/blob/master/helpers_views/helper_env_user_base/user_home/.tmux.conf) - Tmux configuration sample by CharlieTag
