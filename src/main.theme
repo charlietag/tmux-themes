@@ -90,6 +90,6 @@ set -ag status-left "#[fg=white,bg=red,bold]#(~/.tmux/plugins/tmux-themes/script
 #set -g status-right-length "#{@status-right-length}"
 
 set -g status-right-style bg=colour233,fg=colour243 # default style for left status bar , no use actually, because style is overrided while setting status-format below
-set -g status-right "#[fg=colour235,bg=colour233]#[fg=colour240,bg=colour235] %H:%M:%S #[fg=colour240,bg=colour235]#[fg=colour233,bg=colour240] %d-%b-%y #[fg=colour245,bg=colour240]#[fg=colour232,bg=colour245,bold] #H #[fg=colour232,bg=colour100,bold] #(uptime| awk -F'load average: ' '{print $2}' | sed 's/ //g') "
+set -g status-right "#[fg=colour235,bg=colour233]#[fg=colour240,bg=colour235] #H #[fg=colour240,bg=colour235]#[fg=colour233,bg=colour240] #(uptime| awk -F'load average: ' '{print $2}' | sed 's/ //g') #[fg=colour245,bg=colour240]#[fg=colour232,bg=colour245,bold] %d-%b-%y #[fg=colour232,bg=colour100,bold] %H:%M:%S "
 #set -g status-right "#[fg=colour235,bg=colour233]◀#[fg=colour240,bg=colour235] %H:%M:%S #[fg=colour240,bg=colour235]◀#[fg=colour233,bg=colour240] %d-%b-%y #[fg=colour245,bg=colour240]◀#[fg=colour232,bg=colour245,bold] #H "
 
