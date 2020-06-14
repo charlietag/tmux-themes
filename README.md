@@ -38,7 +38,7 @@ Enjoy your tmux's new look !
 # Examples
 
 tmux-theme:<br/>
-![tmux-theme](/screenshots/tmux-theme-3.png)
+![tmux-theme](/screenshots/tmux-theme-4.png)
 
 There might be more themes in the future.
 
