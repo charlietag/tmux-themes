@@ -24,13 +24,13 @@ main() {
   #local load_cpu="$(echo -e "${load_info}" |grep Cpu | grep -Eo '[[:digit:].,]*'| sed -e ':a;N;$!ba;s/\n//g' | awk -F',' '{print $1"% Sys:"$2"% Total:"100-$4"% IO:"$5 }')"
   local load_cpu="$(echo -e "${load_info}" |grep Cpu | grep -Eo '[[:digit:].,]*'| sed -e ':a;N;$!ba;s/\n//g' | awk -F',' '{print 100-$4 }')"
 
-	local load_ram="$(echo -e "${load_info}" | grep  'Mem' | grep -Eo '[[:digit:].,]*' | sed ':a;N;$!ba;s/\n/ /g' | awk '{print 100-$3/$1*100","$12/$8*100}')"
+  local load_ram="$(echo -e "${load_info}" | grep  'Mem' | grep -Eo '[[:digit:].,]*' | sed ':a;N;$!ba;s/\n/ /g' | awk '{print 100-$3/$1*100","$12/$8*100}')"
   local load_mem="$(echo -e "${load_ram}" | cut -d',' -f1)"
   local load_swap="$(echo -e "${load_ram}" | cut -d',' -f2)"
 
-	format_cpu "${load_cpu}"
-	format_mem "${load_mem}"
-	format_swap "${load_swap}"
+  format_cpu "${load_cpu}"
+  format_mem "${load_mem}"
+  format_swap "${load_swap}"
 }
 
 main
