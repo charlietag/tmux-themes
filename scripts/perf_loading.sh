@@ -8,8 +8,8 @@ format_cpu() {
   local load_cpu="$(numfmt --padding=5 ${1})"
 	#echo -n "#[fg=colour233,bg=colour10,bold] CPU:${load_cpu}% "
 	#echo -n "#[fg=colour233,bg=colour40,bold] CPU:${load_cpu}% "
-	echo -n "#[fg=colour233,bg=colour76,bold] CPU:${load_cpu}% "
-	#echo -n "#[fg=colour233,bg=colour106,bold] CPU:${load_cpu}% "
+	#echo -n "#[fg=colour233,bg=colour76,bold] CPU:${load_cpu}% "
+	echo -n "#[fg=colour233,bg=colour106,bold] CPU:${load_cpu}% "
 
 }
 

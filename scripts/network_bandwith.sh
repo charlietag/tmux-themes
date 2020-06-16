@@ -19,11 +19,11 @@ format_speed() {
 
 # Ref. https://github.com/xamut/tmux-network-bandwidth/blob/master/scripts/network-bandwidth.sh
 main() {
-  local network_bandwith_scheme="#[fg=colour233,bg=colour112,bold]"
+  #local network_bandwith_scheme="#[fg=colour233,bg=colour112,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour118,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour100,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour136,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour144,bold]"
+  local network_bandwith_scheme="#[fg=colour233,bg=colour144,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour172,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour178,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour184,bold]"
