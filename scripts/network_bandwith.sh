@@ -21,7 +21,8 @@ format_speed() {
 main() {
   #local network_bandwith_scheme="#[fg=colour233,bg=colour112,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour118,bold]"
-  local network_bandwith_scheme="#[fg=colour233,bg=colour136,bold]"
+  local network_bandwith_scheme="#[fg=colour233,bg=colour100,bold]"
+  #local network_bandwith_scheme="#[fg=colour233,bg=colour136,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour144,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour172,bold]"
   #local network_bandwith_scheme="#[fg=colour233,bg=colour178,bold]"
