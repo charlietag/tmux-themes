@@ -6,8 +6,9 @@ THEME_PERF_LOADING=$(tmux show-option -gqv "@theme-loading-cpu-mem")
 #[fg=colour233,bg=colour117,bold] CPU:#(top -bn1 |grep Cpu | awk '{print $2}')% #[fg=colour233,bg=colour177,bold] Mem:#(free | grep -E 'Mem:' | awk '{print 100-$4/$2*100}' | xargs -i printf '%.2f\n' {})% #[fg=colour233,bg=colour136,bold] Swap:#(free | grep -E 'Swap:' | awk '{print $3/$2*100}' | xargs -i printf '%.2f\n' {})%
 format_cpu() {
   local load_cpu="$(numfmt --padding=5 ${1})"
-	echo -n "#[fg=colour233,bg=colour10,bold] CPU:${load_cpu}% "
+	#echo -n "#[fg=colour233,bg=colour10,bold] CPU:${load_cpu}% "
 	#echo -n "#[fg=colour233,bg=colour40,bold] CPU:${load_cpu}% "
+	echo -n "#[fg=colour233,bg=colour76,bold] CPU:${load_cpu}% "
 	#echo -n "#[fg=colour233,bg=colour106,bold] CPU:${load_cpu}% "
 
 }
