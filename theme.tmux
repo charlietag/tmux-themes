@@ -5,7 +5,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 main() {
   local theme_file="${CURRENT_DIR}/src/main.theme"
   local status_right_length="$(hostname | wc -c)"
-  local status_right_length="$((65 + ${status_right_length}))"
+  local status_right_length="$((100 + ${status_right_length}))"
   local whoami="$(whoami)"
   tmux set -g @whoami "${whoami}"
 

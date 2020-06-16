@@ -4,6 +4,17 @@ This is an plugin that applying the tmux themes maintained by me.
 
 This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
+# Notes
+
+* This is tested on ***CentOS7*** and ***CentOS 8***.
+* Network bandwith part
+  * Requires
+    * awk (GNU awk)
+    * netstat (dnf install -y net-tools)
+    * numfmt
+  * Reference
+    * https://github.com/xamut/tmux-network-bandwidth
+
 # Installation
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
@@ -41,6 +52,30 @@ tmux-theme:<br/>
 ![tmux-theme](/screenshots/tmux-theme-4.png)
 
 There might be more themes in the future.
+
+# Customization
+
+Here are all available options with their default values:
+
+```bash
+@theme-loading-cpu-mem 'on'            # [ on | off]
+
+@theme-network-bandwith 'on'           # [ on | off]
+```
+
+Don't forget to reload tmux environment (`$ tmux source-file ~/.tmux.conf`)
+after you do this.
+
+
+# Usage
+
+Sample config in ~/.tmux.conf
+
+```bash
+set -g @plugin 'charlietag/tmux-themes'
+set -g @theme-loading-cpu-mem 'on'     # [ on | off] , default: on
+set -g @theme-network-bandwith 'on'    # [ on | off] , default: on
+```
 
 # Useful command
 
