@@ -1,5 +1,6 @@
 # --------------------- bind key ---------------------
-# Toggle will conflicts with split-status-bar
+# Toggle feature is not Fully Compatible with "split-status-bar" "tmux-cpu-model"
+# you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
 
 theme_dark_mode_bind_key() {
   # unbind all tmux-split-statusbar related
