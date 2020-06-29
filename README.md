@@ -61,6 +61,13 @@ Here are all available options with their default values:
 @theme-loading-cpu-mem 'on'            # [ on | off]
 
 @theme-network-bandwith 'on'           # [ on | off]
+
+@theme-dark-mode 'on'                  # [ on | off] , default off
+
+@theme-dard-mode-bindkey 'T'           # [ -r T | M-s | -n F11 ] , this is for toggle theme dark mode, define yourself just like bind-key
+                                       #                         , [NOTICE] toggle feature will conflict with "split-status-bar" "tmux-cpu-model"
+                                       #                         , [NOTICE] you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
+
 ```
 
 Don't forget to reload tmux environment (`$ tmux source-file ~/.tmux.conf`)
@@ -75,6 +82,11 @@ Sample config in ~/.tmux.conf
 set -g @plugin 'charlietag/tmux-themes'
 set -g @theme-loading-cpu-mem 'on'     # [ on | off] , default: on
 set -g @theme-network-bandwith 'on'    # [ on | off] , default: on
+
+set -g @theme-dark-mode 'on'           # [ on | off] , default off
+set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for toggle theme dark mode, define yourself just like bind-key
+                                       #                         , toggle feature will conflict with "split-status-bar" "tmux-cpu-model"
+                                       #                         , you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
 ```
 
 # Useful command

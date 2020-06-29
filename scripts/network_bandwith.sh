@@ -19,15 +19,24 @@ format_speed() {
 
 # Ref. https://github.com/xamut/tmux-network-bandwidth/blob/master/scripts/network-bandwidth.sh
 main() {
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour112,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour118,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour100,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour136,bold]"
-  local network_bandwith_scheme="#[fg=colour233,bg=colour144,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour172,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour178,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour184,bold]"
-  #local network_bandwith_scheme="#[fg=colour233,bg=colour214,bold]"
+  local theme_dark_mode="$(tmux show-option -gqv "@theme-dark-mode")"
+  if [[ "${theme_dark_mode}" != "on" ]] ; then
+    theme_dark_mode="off"
+  fi
+
+  if [[ "${theme_dark_mode}" = "off" ]]; then
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour112,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour118,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour100,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour136,bold]"
+    local network_bandwith_scheme="#[fg=colour233,bg=colour144,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour172,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour178,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour184,bold]"
+    #local network_bandwith_scheme="#[fg=colour233,bg=colour214,bold]"
+  else
+    local network_bandwith_scheme="#[fg=colour144,bg=black,bold]"
+  fi
 
   local sleep_time=$(tmux show-option -gqv "status-interval")
   #local old_value=$(tmux show-option -gqv "@network-bandwidth-previous-value")
@@ -44,6 +53,7 @@ main() {
     local download_speed=$(((${second_measure[0]} - ${first_measure[0]}) / $sleep_time))
     local upload_speed=$(((${second_measure[1]} - ${first_measure[1]}) / $sleep_time))
     local this_result="${network_bandwith_scheme} ↓$(format_speed ${download_speed}) ↑$(format_speed ${upload_speed}) "
+    #local this_result="${network_bandwith_scheme} D:$(format_speed ${download_speed}) U:$(format_speed ${upload_speed}) "
 
     # tmux set will cause mouse-selection goes to unselected mode...!
     #tmux set -g  "@network-bandwidth-previous-value" "${this_result}"
