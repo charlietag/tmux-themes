@@ -49,7 +49,10 @@ Enjoy your tmux's new look !
 # Examples
 
 tmux-theme:<br/>
-![tmux-theme](/screenshots/tmux-theme-4.png)
+![tmux-theme](/screenshots/tmux-theme-5.png)
+
+tmux-theme (Dark Mode):<br/>
+![tmux-theme](/screenshots/tmux-theme_dark-mode-1.png)
 
 There might be more themes in the future.
 
