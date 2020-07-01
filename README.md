@@ -67,7 +67,7 @@ Here are all available options with their default values:
 
 @theme-dark-mode 'on'                  # [ on | off] , default off
 
-@theme-dard-mode-bindkey 'T'           # [ -r T | M-s | -n F11 ] , this is for toggle theme dark mode, define yourself just like bind-key
+@theme-dard-mode-bindkey 'T'           # [ -r T | M-s | -n F11 ] , [ experimental !] this is for toggle theme dark mode, define yourself just like bind-key
                                        #                         , [NOTICE] toggle feature is not Fully Compatible with "split-status-bar" "tmux-cpu-model"
                                        #                         , [NOTICE] you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
 
