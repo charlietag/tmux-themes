@@ -64,6 +64,17 @@ theme_dark_mode_toggle() {
     fi
   fi
 
+  # --- For support tmux-coninuum ---
+  local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'tmux-plugins/tmux-continuum')"
+
+  if [[ -n "${check_plugin_status}" ]]; then
+		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/continuum.tmux)"
+    if [[ -f "${plugin_script}" ]]; then
+      ${plugin_script} >/dev/null 2>/dev/null
+    fi
+
+  fi
+
   # --- For support tmux-split-statusbar ---
   local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'charlietag/tmux-split-statusbar')"
 

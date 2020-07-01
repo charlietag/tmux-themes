@@ -110,8 +110,9 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
 # Change Log
 
 * 2020/07/01
-  * https://github.com/charlietag/tmux-themes/compare/v0.0.0...v0.0.1
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.0...v0.0.2
     * Complete dark mode toggle function
     * Fully Compatible
       * [split-status-bar](https://github.com/charlietag/tmux-split-statusbar)
       * [tmux-cpu-model](https://github.com/charlietag/tmux-cpu-model)
+      * [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum)
