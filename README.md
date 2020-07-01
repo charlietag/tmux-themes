@@ -67,9 +67,7 @@ Here are all available options with their default values:
 
 @theme-dark-mode 'on'                  # [ on | off] , default off
 
-@theme-dard-mode-bindkey 'T'           # [ -r T | M-s | -n F11 ] , [ EXPERIMENTAL! ] this is for toggle theme dark mode, define yourself just like bind-key
-                                       #                         , [NOTICE] toggle feature is not Fully Compatible with "split-status-bar" "tmux-cpu-model"
-                                       #                         , [NOTICE] you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
+@theme-dard-mode-bindkey 'T'           # [ -r T | M-s | -n F11 ] , this is for toggle theme dark mode, define yourself just like bind-key
 
 ```
 
@@ -87,9 +85,7 @@ set -g @theme-loading-cpu-mem 'on'     # [ on | off] , default: on
 set -g @theme-network-bandwith 'on'    # [ on | off] , default: on
 
 set -g @theme-dark-mode 'on'           # [ on | off] , default off
-set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , [ EXPERIMENTAL! ]  this is for toggle theme dark mode, define yourself just like bind-key
-                                       #                         , toggle feature will is not Fully Compatible with "split-status-bar" "tmux-cpu-model"
-                                       #                         , you'd better use config "theme-dark-mode" then, do a tmux RELOAD (<prefix> R) instead
+set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for toggle theme dark mode, define yourself just like bind-key
 ```
 
 # Useful command
@@ -110,3 +106,12 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , [ EXPERIMENTA
 # License
 
 [MIT license](https://opensource.org/licenses/MIT)
+
+# Change Log
+
+* 2020/07/01
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.0...v0.0.1
+    * Complete dark mode toggle function
+    * Fully Compatible
+      * [split-status-bar](https://github.com/charlietag/tmux-split-statusbar)
+      * [tmux-cpu-model](https://github.com/charlietag/tmux-cpu-model)

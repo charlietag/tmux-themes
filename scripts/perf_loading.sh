@@ -43,7 +43,7 @@ format_swap() {
 }
 
 main() {
-  local theme_dark_mode="$(tmux show-option -gqv "@theme-dark-mode")"
+  local theme_dark_mode="$(tmux show-option -gqv "@theme-dark-mode-setto")"
   if [[ "${theme_dark_mode}" != "on" ]] ; then
     theme_dark_mode="off"
   fi

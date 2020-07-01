@@ -33,24 +33,46 @@ theme_env_setup() {
 # --------------------- Dark Mode ---------------------
 theme_dark_mode_on() {
   local theme_file="${CURRENT_DIR}/src/main_dark.theme"
-  tmux set -g @theme-dark-mode 'on'
   tmux source-file ${theme_file}
 
 }
 
 theme_dark_mode_off() {
   local theme_file="${CURRENT_DIR}/src/main.theme"
-  tmux set -g @theme-dark-mode 'off'
   tmux source-file ${theme_file}
 
 }
 
 theme_dark_mode_toggle() {
 	local theme_dark_mode="$1"
-  if [[ "${theme_dark_mode}" = "off" ]]; then
+  if [[ "${theme_dark_mode_setto}" = "off" ]]; then
     theme_dark_mode_on
+    tmux set -g @theme-dark-mode-setto 'on'
   else
     theme_dark_mode_off
+    tmux set -g @theme-dark-mode-setto 'off'
   fi
+
+
+  # --- For support tmux-cpu-model (set -ga status-left) ---
+  local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'charlietag/tmux-cpu-model')"
+
+  if [[ -n "${check_plugin_status}" ]]; then
+		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-cpu-model/cpu-model.tmux)"
+    if [[ -f "${plugin_script}" ]]; then
+      ${plugin_script}
+    fi
+  fi
+
+  # --- For support tmux-split-statusbar ---
+  local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'charlietag/tmux-split-statusbar')"
+
+  if [[ -n "${check_plugin_status}" ]]; then
+		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux)"
+    if [[ -f "${plugin_script}" ]]; then
+      ${plugin_script} reload
+    fi
+  fi
+
 }
 

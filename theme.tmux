@@ -10,6 +10,8 @@ main() {
   local theme_dark_mode="$(tmux show-option -gqv "@theme-dark-mode")"
   [[ "${theme_dark_mode}" != "on" ]] && theme_dark_mode="off"
 
+  local theme_dark_mode_setto="$(tmux show-option -gqv "@theme-dark-mode-setto")"
+
 
   if [[ "${toggle_flag}" != "toggle" ]]; then
     # ---- Initialize theme.tmux instance---
@@ -17,10 +19,20 @@ main() {
     theme_env_setup
 
 
-    if [[ "${theme_dark_mode}" = "off" ]]; then
-      theme_dark_mode_off
-    else
+    if [[ "${theme_dark_mode_setto}" = "on" ]]; then
       theme_dark_mode_on
+      tmux set -g @theme-dark-mode-setto 'on'
+    elif [[ "${theme_dark_mode_setto}" = "off" ]]; then
+      theme_dark_mode_off
+      tmux set -g @theme-dark-mode-setto 'off'
+    else
+      if [[ "${theme_dark_mode}" = "on" ]]; then
+        theme_dark_mode_on
+        tmux set -g @theme-dark-mode-setto 'on'
+      else
+        theme_dark_mode_off
+        tmux set -g @theme-dark-mode-setto 'off'
+      fi
     fi
     # ---- Initialize theme.tmux instance---
   else
