@@ -42,6 +42,7 @@ main() {
       fi
     fi
     # ---- Initialize theme.tmux instance---
+
   fi
 }
 
