@@ -38,7 +38,7 @@ main() {
   else
 
     # ---- theme must be initialized (existing tmux themes instance) ---
-    theme_dark_mode_toggle "${theme_dark_mode}"
+    theme_dark_mode_toggle
     # ---- theme must be initialized (existing tmux themes instance) ---
   fi
 }

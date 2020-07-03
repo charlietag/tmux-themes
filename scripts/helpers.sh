@@ -44,7 +44,6 @@ theme_dark_mode_off() {
 }
 
 theme_dark_mode_toggle() {
-	local theme_dark_mode="$1"
   if [[ "${theme_dark_mode_setto}" = "off" ]]; then
     theme_dark_mode_on
     tmux set -g @theme-dark-mode-setto 'on'
