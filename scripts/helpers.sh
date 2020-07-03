@@ -59,7 +59,13 @@ theme_dark_mode_toggle() {
   if [[ -n "${check_plugin_status}" ]]; then
 		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-cpu-model/cpu-model.tmux)"
     if [[ -f "${plugin_script}" ]]; then
-      ${plugin_script}
+      if [[ "${theme_dark_mode_setto}" = "off" ]]; then
+        # dark-on set to on , because of dark_mode_toggle
+        ${plugin_script} dark-on no-reload
+      else
+        # dark-on set to off , because of dark_mode_toggle
+        ${plugin_script} dark-off no-reload
+      fi
     fi
   fi
 
