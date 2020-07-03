@@ -15,9 +15,9 @@ main() {
 
   if [[ "${toggle_flag}" = "toggle" ]]; then
 
-    # ---- theme should have been initialized (existing tmux themes instance) ---
+    # ---- theme should have been initialized already (existing tmux themes instance) ---
     theme_dark_mode_toggle
-    # ---- theme should have been initialized (existing tmux themes instance) ---
+    # ---- theme should have been initialized already (existing tmux themes instance) ---
 
   else
 
