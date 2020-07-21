@@ -96,7 +96,7 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
 
 # Also read
 
-- [.tmux.conf](https://github.com/charlietag/os_preparation/blob/master/helpers_views/helper_env_user_base/user_home/.tmux.conf) - Tmux configuration sample by CharlieTag
+- [.tmux.conf](https://github.com/charlietag/tmux_settings/blob/master/tmux.conf) - Tmux configuration sample by CharlieTag
 
 # Other goodies
 
