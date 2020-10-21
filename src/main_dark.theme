@@ -28,7 +28,8 @@ set -g status-justify centre
 
 
 # window style - Full window (useful when splitting into panes)
-set-window-option -g window-style bg=colour234      #leave fg to be default
+# set-window-option -g window-style bg=colour234      #leave fg to be default
+set-window-option -g window-style bg=colour236      #leave fg to be default
 set-window-option -g window-active-style bg=black   #leave fg to be default
 
 

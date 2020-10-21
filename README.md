@@ -116,3 +116,6 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
       * [split-status-bar](https://github.com/charlietag/tmux-split-statusbar)
       * [tmux-cpu-model](https://github.com/charlietag/tmux-cpu-model)
       * [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum)
+* 2020/10/21
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.2...v0.0.3
+    * change non-active panel background color. 256color from 234 -> 236
