@@ -119,3 +119,6 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
 * 2020/10/21
   * https://github.com/charlietag/tmux-themes/compare/v0.0.2...v0.0.3
     * change non-active panel background color. 256color from 234 -> 236
+* 2020/10/22
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.3...v0.0.4
+    * tweak for background color

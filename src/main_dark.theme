@@ -29,7 +29,7 @@ set -g status-justify centre
 
 # window style - Full window (useful when splitting into panes)
 # set-window-option -g window-style bg=colour234      #leave fg to be default
-set-window-option -g window-style bg=colour236      #leave fg to be default
+set-window-option -g window-style bg=colour237      #leave fg to be default
 set-window-option -g window-active-style bg=black   #leave fg to be default
 
 
@@ -38,7 +38,7 @@ set -g window-status-separator " "
 
 
 # windows status bar background
-set -g window-status-style bg=colour236
+set -g window-status-style bg=colour235
 # Current window status
 #set -g window-status-current-style bg=colour82,fg=colour232,bold
 set -g window-status-current-style bg=colour10,fg=colour232,bold
@@ -46,7 +46,7 @@ set -g window-status-current-style bg=colour10,fg=colour232,bold
 #set -g window-status-last-style bg=colour245,fg=colour232,bold
 
 # Window with activity status - trigger when process finished, ex git push
-set -g window-status-activity-style bg=colour236,fg=colour216
+set -g window-status-activity-style bg=colour235,fg=colour216
 set -g window-status-bell-style reverse
 
 # Require #F - for display Z - pane maximize window symbol
@@ -55,10 +55,12 @@ set -g window-status-current-format "#I #W#{?window_flags, #F,}"
 
 
 # Pane border style
-set -g pane-border-style bg=colour234,fg=colour2
+# set -g pane-border-style bg=colour234,fg=colour2
+set -g pane-border-style bg=colour237,fg=colour2
 # Active pane border style
 #set -g pane-active-border-style bg=black,fg=red
-set -g pane-active-border-style bg=colour234,fg=colour2
+# set -g pane-active-border-style bg=colour234,fg=colour2
+set -g pane-active-border-style bg=colour237,fg=colour2
 
 
 # Pane number indicator - useful , when  choose-tree (<prefix> + s
