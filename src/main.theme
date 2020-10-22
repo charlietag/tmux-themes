@@ -72,7 +72,8 @@ set -g display-panes-active-colour red
 #                 Status bar style
 # --------------------------------------------------------------------------------
 # Defaut whole status bar style
-set -g status-style bg=colour233,fg=colour240
+#set -g status-style bg=colour233,fg=colour240
+set -g status-style bg=black,fg=colour240
 
 
 # Left side of status bar
