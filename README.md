@@ -124,4 +124,4 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
     * tweak for background color
 * 2020/10/23
   * https://github.com/charlietag/tmux-themes/compare/v0.0.4...v0.0.5
-    * Change tmux active pane border to green and thicker, for more readable
+    * Change tmux active pane border to light orange and thicker, for more readable

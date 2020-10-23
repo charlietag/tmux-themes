@@ -60,7 +60,7 @@ set -g pane-border-style bg=colour237,fg=colour2
 # Active pane border style
 #set -g pane-active-border-style bg=black,fg=red
 # set -g pane-active-border-style bg=colour234,fg=colour2
-set -g pane-active-border-style bg=colour2,fg=colour2
+set -g pane-active-border-style bg=colour208,fg=colour208
 
 
 # Pane number indicator - useful , when  choose-tree (<prefix> + s
