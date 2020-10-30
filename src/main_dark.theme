@@ -28,8 +28,8 @@ set -g status-justify centre
 
 
 # window style - Full window (useful when splitting into panes)
-# set-window-option -g window-style bg=colour234      #leave fg to be default
-set-window-option -g window-style bg=colour237      #leave fg to be default
+set-window-option -g window-style bg=colour234      #leave fg to be default
+# set-window-option -g window-style bg=colour237      #leave fg to be default
 set-window-option -g window-active-style bg=black   #leave fg to be default
 
 
@@ -55,8 +55,8 @@ set -g window-status-current-format "#I #W#{?window_flags, #F,}"
 
 
 # Pane border style
-# set -g pane-border-style bg=colour234,fg=colour2
-set -g pane-border-style bg=colour237,fg=colour2
+set -g pane-border-style bg=colour234,fg=colour2
+# set -g pane-border-style bg=colour237,fg=colour2
 # Active pane border style
 #set -g pane-active-border-style bg=black,fg=red
 # set -g pane-active-border-style bg=colour234,fg=colour2
