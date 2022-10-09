@@ -21,11 +21,13 @@ theme_env_setup() {
   local whoami="$(whoami)"
   tmux set -g @whoami "${whoami}"
 
-  local os_ver="$(lsb_release -irs | cut -d'.' -f-2)"
+  # -- RHEL 9 does not support lsb_release command ---
+  # local os_ver="$(lsb_release -irs | cut -d'.' -f-2)"
+  local os_ver="$(cat /etc/os-release |grep -i pretty_name | cut -d'"' -f2 | grep -Eo "[[:print:]]+[[:digit:]\.]+")"
   tmux set -g @os_ver "${os_ver}"
 
   #--- This way will cause ---> value is invalid: #{@status-right-length} ---
-  #tmux set -g @status-right-length "${status_right_length}"   
+  #tmux set -g @status-right-length "${status_right_length}"
 
   tmux set -g status-right-length "${status_right_length}"
 }
@@ -57,7 +59,7 @@ theme_dark_mode_toggle() {
   local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'charlietag/tmux-cpu-model')"
 
   if [[ -n "${check_plugin_status}" ]]; then
-		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-cpu-model/cpu-model.tmux)"
+    local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-cpu-model/cpu-model.tmux)"
     if [[ -f "${plugin_script}" ]]; then
       if [[ "${theme_dark_mode_setto}" = "off" ]]; then
         # dark-on set to on , because of dark_mode_toggle
@@ -73,7 +75,7 @@ theme_dark_mode_toggle() {
   local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'tmux-plugins/tmux-continuum')"
 
   if [[ -n "${check_plugin_status}" ]]; then
-		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/continuum.tmux)"
+    local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/continuum.tmux)"
     if [[ -f "${plugin_script}" ]]; then
       ${plugin_script} >/dev/null 2>/dev/null
     fi
@@ -84,7 +86,7 @@ theme_dark_mode_toggle() {
   local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'charlietag/tmux-split-statusbar')"
 
   if [[ -n "${check_plugin_status}" ]]; then
-		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux)"
+    local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux)"
     if [[ -f "${plugin_script}" ]]; then
       ${plugin_script} reload
     fi
