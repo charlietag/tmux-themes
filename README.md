@@ -131,3 +131,6 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
 * 2022/10/09
   * https://github.com/charlietag/tmux-themes/compare/v0.0.6...v0.0.7
     * Fix status bar - os version (rhel 9 does not support lsb_release command)
+* 2022/10/18
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.7...v0.0.8
+    * Fix logged on count number for screen and tmux
