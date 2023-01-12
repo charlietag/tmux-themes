@@ -4,7 +4,7 @@
 
 theme_dark_mode_bind_key() {
   # unbind all tmux-split-statusbar related
-  tmux list-keys |grep tmux-themes | awk '{print $2" "$3" "$4}' | xargs -i bash -c "tmux unbind-key {}"
+  tmux list-keys |grep tmux-themes | awk '{print $2" "$3" "$4}' | xargs -I{} bash -c "tmux unbind-key {}"
 
   # Define bind key for status bar togle
   local bind_key="$(tmux show-option -gqv "@theme-dard-mode-bindkey")"

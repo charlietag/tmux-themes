@@ -3,7 +3,7 @@
 THEME_PERF_LOADING=$(tmux show-option -gqv "@theme-loading-cpu-mem")
 [[ "${THEME_PERF_LOADING}" = "off" ]] && exit
 
-#[fg=colour233,bg=colour117,bold] CPU:#(top -bn1 |grep Cpu | awk '{print $2}')% #[fg=colour233,bg=colour177,bold] Mem:#(free | grep -E 'Mem:' | awk '{print 100-$4/$2*100}' | xargs -i printf '%.2f\n' {})% #[fg=colour233,bg=colour136,bold] Swap:#(free | grep -E 'Swap:' | awk '{print $3/$2*100}' | xargs -i printf '%.2f\n' {})%
+#[fg=colour233,bg=colour117,bold] CPU:#(top -bn1 |grep Cpu | awk '{print $2}')% #[fg=colour233,bg=colour177,bold] Mem:#(free | grep -E 'Mem:' | awk '{print 100-$4/$2*100}' | xargs -I{} printf '%.2f\n' {})% #[fg=colour233,bg=colour136,bold] Swap:#(free | grep -E 'Swap:' | awk '{print $3/$2*100}' | xargs -I{} printf '%.2f\n' {})%
 format_cpu() {
   local load_cpu="$(numfmt --padding=5 ${1})"
   local theme_dark_mode="$2"

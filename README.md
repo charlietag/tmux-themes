@@ -134,3 +134,6 @@ set -g @theme-dard-mode-bindkey 'T'    # [ -r T | M-s | -n F11 ] , this is for t
 * 2022/10/18
   * https://github.com/charlietag/tmux-themes/compare/v0.0.7...v0.0.8
     * Fix logged on count number for screen and tmux
+* 2023/01/13
+  * https://github.com/charlietag/tmux-themes/compare/v0.0.8...v0.0.9
+    * xargs -i is deprecated, use -I{} instead
